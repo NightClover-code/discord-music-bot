@@ -19,7 +19,7 @@ export class Bot {
   }
 
   //messages
-  checkMessages(globalQueue: Map<any, any>): void {
+  checkMessages(): void {
     this.client.on('message', message => {
       if (message.content.startsWith(this.PREFIX)) {
         const [CMD_NAME, ...args] = message.content
@@ -30,8 +30,7 @@ export class Bot {
         return this.listener.listenForCommands(
           message,
           CMD_NAME as command,
-          args,
-          globalQueue
+          args
         );
       }
     });

@@ -7,8 +7,7 @@ export class Listener {
   listenForCommands = (
     message: Message,
     CMD_NAME: string,
-    args: string[],
-    globalQueue: Map<any, any>
+    args: string[]
   ): Promise<Message> => {
     if (
       !args.length &&
