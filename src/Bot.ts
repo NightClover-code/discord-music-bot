@@ -1,4 +1,4 @@
-import { Client } from 'discord.js';
+import { CustomClient } from './Client';
 import { Listener } from './Listener';
 
 export class Bot {
@@ -7,7 +7,7 @@ export class Bot {
 
   listener = new Listener();
 
-  constructor(public client: Client) {}
+  constructor(public client: CustomClient) {}
 
   //login the bot
   login(): void {
