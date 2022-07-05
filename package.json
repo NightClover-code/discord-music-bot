@@ -1,0 +1,25 @@
+{
+  "name": "gillette",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:build": "tsc -w",
+    "dev:run": "nodemon build/index.js",
+    "dev": "concurrently yarn:dev:*",
+    "start": "node build/index.js",
+    "lavalink": "java -jar Lavalink.jar",
+    "postinstall": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.1",
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.4.3"
+  }
+}
