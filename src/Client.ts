@@ -21,6 +21,8 @@ export class CustomClient extends Client {
     },
   });
 
+  musicPlayers = new Map();
+
   constructor() {
     super();
   }

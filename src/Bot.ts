@@ -30,7 +30,8 @@ export class Bot {
         return this.listener.listenForCommands(
           message,
           CMD_NAME as command,
-          args
+          args,
+          this.client
         );
       }
     });

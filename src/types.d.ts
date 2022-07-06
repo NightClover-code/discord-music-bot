@@ -1,1 +1,1 @@
-type command = 'user' | 'server';
+type command = 'user' | 'server' | 'join';
