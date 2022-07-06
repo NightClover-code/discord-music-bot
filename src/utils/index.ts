@@ -1,5 +1,5 @@
 export const commandsWithArgs = {
   user: ['info'],
   server: ['name', 'members'],
-  join: ['play'],
+  music: ['play', 'skip', 'stop'],
 };

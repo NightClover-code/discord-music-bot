@@ -2,8 +2,14 @@ import { Message } from 'discord.js';
 import { CustomClient } from '../Client';
 import { possibleArgsEmbed } from '../embeds/messageEmbed';
 
-export class JoinCommand {
-  joinHelper = (
+enum ArgTypes {
+  PLAY = 'play',
+  STOP = 'stop',
+  SKIP = 'skip',
+}
+
+export class MusicCommand {
+  musicHelper = (
     message: Message,
     args: string[],
     CMD_NAME: string,

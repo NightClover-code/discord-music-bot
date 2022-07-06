@@ -2,17 +2,17 @@ import { Message } from 'discord.js';
 import { UserCommand } from '../commands/UserCommand';
 import { ServerCommand } from '../commands/ServerCommand';
 import { possibleCommandsEmbed } from '../embeds/messageEmbed';
-import { JoinCommand } from '../commands/JoinCommand';
+import { MusicCommand } from '../commands/MusicCommand';
 import { CustomClient } from '../Client';
 
 const serverCommand = new ServerCommand();
 const userCommand = new UserCommand();
-const joinCommand = new JoinCommand();
+const musicCommand = new MusicCommand();
 
 enum CommandTypes {
   SERVER = 'server',
   USER = 'user',
-  JOIN = 'join',
+  MUSIC = 'music',
 }
 
 export const commandsListenerSwitch = (
@@ -26,8 +26,8 @@ export const commandsListenerSwitch = (
       return serverCommand.serverHelper(message, args, CMD_NAME);
     case CommandTypes.USER:
       return userCommand.userHelper(message, args, CMD_NAME);
-    case CommandTypes.JOIN:
-      return joinCommand.joinHelper(message, args, CMD_NAME, client);
+    case CommandTypes.MUSIC:
+      return musicCommand.musicHelper(message, args, CMD_NAME, client);
     default:
       return possibleCommandsEmbed(message);
   }
