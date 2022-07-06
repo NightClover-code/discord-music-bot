@@ -2,6 +2,7 @@ import { Message } from 'discord.js';
 import { CustomClient } from '../Client';
 import { possibleArgsEmbed } from '../embeds/messageEmbed';
 import { playSong } from '../utils/music/playSong';
+import { skipSong } from '../utils/music/skipSong';
 import { stopSong } from '../utils/music/stopSong';
 
 enum ArgTypes {
@@ -22,6 +23,8 @@ export class MusicCommand {
         return playSong(message, args, client);
       case ArgTypes.STOP:
         return stopSong(message, client);
+      case ArgTypes.SKIP:
+        return skipSong(message, client);
       default:
         return possibleArgsEmbed(message, CMD_NAME as command);
     }

@@ -1,7 +1,7 @@
 import { Message } from 'discord.js';
 import { CustomClient } from '../../Client';
 
-export const stopSong = async (
+export const skipSong = async (
   message: Message,
   client: CustomClient
 ): Promise<Message> => {
@@ -12,9 +12,11 @@ export const stopSong = async (
 
   const player = client.manager.players.get(guildId);
 
-  if (!player) return message.reply('There are no songs in the queue!');
+  if (!player || !player.queue.size)
+    return message.reply('There are no songs in the queue!');
 
-  player.destroy();
+  player.stop();
+  player.play();
 
-  return message.reply('Queue successfully cleared!');
+  return message.reply(`Now playing...${player.queue[0].title}`);
 };
