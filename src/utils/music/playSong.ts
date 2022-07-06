@@ -5,7 +5,7 @@ export const playSong = async (
   message: Message,
   args: string[],
   client: CustomClient
-) => {
+): Promise<Message> => {
   const _args = args.filter((el, i) => i > 0);
 
   const channel = message.member?.voice.channel;
