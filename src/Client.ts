@@ -6,7 +6,7 @@ const nodes = [
     //TODO
     host: 'localhost',
     password: '123456',
-    port: 8000,
+    port: 2333,
   },
 ] as NodeOptions[];
 

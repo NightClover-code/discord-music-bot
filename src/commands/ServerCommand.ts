@@ -10,10 +10,10 @@ enum ArgTypes {
 export class ServerCommand {
   serverHelper = (
     message: Message,
-    firstArg: string,
+    args: string[],
     CMD_NAME: string
   ): Promise<Message> | null => {
-    switch (firstArg) {
+    switch (args[0]) {
       case ArgTypes.NAME:
         return serverNameEmbed(message);
       case ArgTypes.MEMBERS:

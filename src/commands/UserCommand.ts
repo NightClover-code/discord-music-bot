@@ -9,10 +9,10 @@ enum ArgTypes {
 export class UserCommand {
   userHelper = (
     message: Message,
-    firstArg: string,
+    args: string[],
     CMD_NAME: string
   ): Promise<Message> => {
-    switch (firstArg) {
+    switch (args[0]) {
       case ArgTypes.INFO:
         return userInfoEmbed(message);
       default:

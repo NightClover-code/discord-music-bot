@@ -11,10 +11,6 @@ export class Bot {
 
   //login the bot
   login(): void {
-    this.client.on('ready', () => {
-      console.log(`${this.client.user?.username} is now online!`);
-    });
-
     this.client.login(this.DISCORD_BOT_TOKEN);
   }
 

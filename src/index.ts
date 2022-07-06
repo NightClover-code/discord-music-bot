@@ -20,6 +20,14 @@ client.manager.on('nodeError', (node, error) => {
   );
 });
 
+// Listen for when the client becomes ready
+client.once('ready', () => {
+  // Initiates the manager and connects to all the nodes
+  client.manager.init(client.user?.id);
+
+  console.log(`${client.user?.username} is now online!`);
+});
+
 // THIS IS REQUIRED. Send raw events to Erela.js
 client.on('raw', d => client.manager.updateVoiceState(d));
 

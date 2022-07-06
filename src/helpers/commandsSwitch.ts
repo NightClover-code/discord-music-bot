@@ -23,11 +23,11 @@ export const commandsListenerSwitch = (
 ): Promise<Message> | null => {
   switch (CMD_NAME) {
     case CommandTypes.SERVER:
-      return serverCommand.serverHelper(message, args[0], CMD_NAME);
+      return serverCommand.serverHelper(message, args, CMD_NAME);
     case CommandTypes.USER:
-      return userCommand.userHelper(message, args[0], CMD_NAME);
+      return userCommand.userHelper(message, args, CMD_NAME);
     case CommandTypes.JOIN:
-      return joinCommand.joinHelper(message, args[0], CMD_NAME, client);
+      return joinCommand.joinHelper(message, args, CMD_NAME, client);
     default:
       return possibleCommandsEmbed(message);
   }
