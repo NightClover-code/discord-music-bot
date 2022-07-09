@@ -6,7 +6,7 @@
 
 My friends challenged me to build a music discord bot for our server, and I thought it would be a very fun side project!
 
-There are many options to fetch music with node.js such as using ffmpeg and the youtube API - but I went with Lavalink as it offers a more performant service.
+There are many options to fetch music with `node.js` such as using `ffmpeg` and the youtube API - but I went with `Lavalink` as it offers a more performant service.
 
 Here was the challenge:
 
