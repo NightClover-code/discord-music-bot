@@ -1,3 +1,4 @@
+import { MessageEmbed } from 'discord.js';
 import { CustomClient } from './Client';
 import { Listener } from './Listener';
 
