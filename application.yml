@@ -1,6 +1,6 @@
 server: # REST and WS server
   address: 0.0.0.0
-  port: 8001
+  port: 8000
 lavalink:
   server:
     password: '123456'
