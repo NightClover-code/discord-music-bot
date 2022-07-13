@@ -12,5 +12,5 @@ export const commandsWithArgs = {
 export const nodeOptions = {
   host: process.env.HOST,
   password: process.env.PASSWORD,
-  port: 8000,
+  port: parseInt(process.env.PORT!) || 8000,
 } as NodeOptions;
