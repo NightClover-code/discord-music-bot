@@ -34,8 +34,8 @@ export const playSong = async (
 
   const player = client.manager.create({
     guild: guildId,
-    voiceChannel: message.member.voice.channel.id,
-    textChannel: message.channel.id,
+    voiceChannel: channel.id,
+    textChannel: channel.id,
   });
 
   player.connect();
