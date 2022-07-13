@@ -1,6 +1,7 @@
 FROM node:16-slim
 WORKDIR /app
-COPY package.json /app
+COPY package.json . 
 RUN yarn install
-COPY . /app
+COPY . .
+EXPOSE 8000
 CMD ["yarn", "start"]
