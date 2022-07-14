@@ -1,5 +1,6 @@
 import { Message } from 'discord.js';
 import { CustomClient } from '../../Client';
+import Playlist from '../../models/Playlist';
 
 export const playSong = async (
   message: Message,
@@ -27,14 +28,19 @@ export const playSong = async (
   const search = _args.join(' ');
   let res, tracks;
 
-  const songs = ['intervals 5 htp', 'james franco polyphia'];
-
   try {
     if (search.startsWith('playlist:')) {
-      message.reply(`Loading tracks...`);
+      message.reply(`Adding multiple tracks to queue...`);
+
+      const playlistName = search.slice(9).split(' ')[0];
+
+      const [playlist] = await Playlist.find({ name: playlistName });
+
+      if (!playlist)
+        return message.reply(`We couldn't find the playlist ${playlistName}!`);
 
       tracks = await Promise.all(
-        songs.map(
+        playlist.songs.map(
           async song =>
             (
               await client.manager.search(song, message.author)
@@ -51,9 +57,7 @@ export const playSong = async (
       )
         player.play();
 
-      console.log(tracks);
-
-      return message.reply(`Multiple tracks added to queue!`);
+      return message.reply(`Now playing...${tracks[0].title}`);
     } else {
       res = await client.manager.search(search, message.author);
 

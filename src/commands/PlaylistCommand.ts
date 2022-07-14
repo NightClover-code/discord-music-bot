@@ -5,7 +5,7 @@ import {
   registerUser,
   addSong,
   showSongs,
-  showcasePlaylist,
+  showcasePlaylists,
 } from '../handlers/playlist';
 
 enum ArgTypes {
@@ -30,7 +30,7 @@ export class PlaylistCommand {
       case ArgTypes.ADD:
         return addSong(message, args);
       case ArgTypes.SHOWCASE:
-        return showcasePlaylist(message);
+        return showcasePlaylists(message);
       case ArgTypes.SHOW:
         return showSongs(message, args);
 
