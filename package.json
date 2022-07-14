@@ -11,7 +11,7 @@
     "lavalink": "java -jar Lavalink.jar"
   },
   "devDependencies": {
-    "@types/node": "^18.0.1",
+    "@types/node": "^18.0.4",
     "concurrently": "^7.2.2",
     "nodemon": "^2.0.19",
     "typescript": "^4.7.4"
