@@ -20,8 +20,7 @@ export class PlaylistCommand {
   playlistHelper = (
     message: Message,
     args: string[],
-    CMD_NAME: string,
-    globalQueue: Map<any, any>
+    CMD_NAME: string
   ): Promise<Message> => {
     switch (args[0]) {
       case ArgTypes.REGISTER:

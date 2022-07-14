@@ -7,6 +7,7 @@ export const commandsWithArgs = {
   user: ['info'],
   server: ['name', 'members'],
   music: ['play', 'skip', 'stop'],
+  playlist: ['register', 'create', 'add', 'showcase', 'show'],
 };
 
 export const nodeOptions = {

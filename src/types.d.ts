@@ -1,1 +1,1 @@
-type command = 'user' | 'server' | 'music';
+type command = 'user' | 'server' | 'music' | 'playlist';
