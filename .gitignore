@@ -7,8 +7,7 @@
 /coverage
 
 # production
-/build/*
-!/build/index.js
+/build
 /logs
 
 # misc
