@@ -8,7 +8,8 @@
     "dev:run": "nodemon build/index.js",
     "dev": "concurrently yarn:dev:*",
     "start": "node build/index.js",
-    "lavalink": "java -jar Lavalink.jar"
+    "lavalink": "java -jar Lavalink.jar",
+    "postinstall": "tsc"
   },
   "devDependencies": {
     "@types/node": "^18.0.1",
