@@ -2,6 +2,7 @@
 import { Bot } from './Bot';
 import { CustomClient } from './Client';
 import dotenv from 'dotenv';
+// import mongoose from 'mongoose';
 
 dotenv.config();
 
@@ -21,3 +22,7 @@ client.on('raw', d => client.manager.updateVoiceState(d));
 
 bot.login();
 bot.checkMessages();
+
+// mongoose.connect(process.env.MONGODB_DATABASE_URL!, () => {
+//   console.log('Connected to DB!');
+// });
