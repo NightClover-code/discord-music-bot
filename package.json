@@ -7,10 +7,12 @@
     "dev:build": "tsc -w",
     "dev:run": "nodemon build/index.js",
     "dev": "concurrently yarn:dev:*",
-    "start": "node build/index.js",
+    "start:bot": "node build/index.js",
+    "start:lavalink": "node build/lavalink.js",
     "lavalink": "java -jar Lavalink.jar"
   },
   "devDependencies": {
+    "@types/got": "^9.6.12",
     "@types/node": "^18.0.4",
     "concurrently": "^7.2.2",
     "nodemon": "^2.0.19",
@@ -20,6 +22,7 @@
     "discord.js": "12.5.3",
     "dotenv": "^16.0.1",
     "erela.js": "^2.3.3",
+    "got": "^12.5.3",
     "mongoose": "^6.4.3"
   }
 }
