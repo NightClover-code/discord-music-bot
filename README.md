@@ -15,7 +15,6 @@ Here was the challenge:
 - Using erela.js as a client for Lavalink
 - Building a music command from scratch
 - Building a playlist command from scratch
-- Deploying the lavalink and node.js servers to digital ocean
 
 ## Built With ✨
 
