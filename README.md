@@ -24,5 +24,9 @@ Here was the challenge:
 - MongoDB - Document database
 - Typescript
 
+## Deployment 🚀
+ - Bot deployed on [Repl.it][https://replit.com/]
+ - Lavlink server deployed on [Repl.it][https://replit.com/] based on Darren's repo: https://github.com/DarrenOfficial/lavalink-replit
+
 **Thanks for sharing** 🚀
 
