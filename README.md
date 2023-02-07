@@ -28,5 +28,8 @@ Here was the challenge:
  - Bot deployed on [Repl.it](https://replit.com/)
  - Lavlink server deployed on [Repl.it](https://replit.com/) based on Darren's repo: https://github.com/DarrenOfficial/lavalink-replit
 
+## Author
+- [@achrafdev](https://achrafdev.com)
+
 **Thanks for sharing** 🚀
 
