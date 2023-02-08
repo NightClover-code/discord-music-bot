@@ -16,6 +16,28 @@ Here was the challenge:
 - Building a music command from scratch
 - Building a playlist command from scratch
 
+### Project Structure 📁
+
+```bash
+├───public
+├───src/
+    │   Bot.ts
+    │   Client.ts
+    │   index.ts
+    │   Listener.ts
+    │   types.d.ts
+    ├───commands/
+    ├───embeds/
+    ├───handlers/
+    │   └───playlist/
+    ├───helpers/
+    ├───interfaces/
+    ├───models/
+    └───utils
+        │   index.ts
+        └───music/
+```
+
 ## Built With ✨
 
 - [Node.js](https://nodejs.org/) - JS runtime
